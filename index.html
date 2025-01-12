@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leads Capturados</title>
+</head>
+<body>
+    <h1>Leads Capturados</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Empresa</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lead in leads %}
+            <tr>
+                <td>{{ lead.name }}</td>
+                <td>{{ lead.position }}</td>
+                <td>{{ lead.company }}</td>
+                <td>{{ lead.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/add">Adicionar Lead</a>
+</body>
+</html>
